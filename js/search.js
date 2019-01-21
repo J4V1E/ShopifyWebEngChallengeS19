@@ -4,19 +4,6 @@ $(window).load(function() {
     handleFavourites();
 });
 
-//handles loading of Favourites section
-function handleFavourites() {
-    $('#favouriteTable').find("tr:gt(0)").remove();
-    if (favourites.length > 0) {
-        for (let i = 0; i < favourites.length; i++) {
-            fillTable(favourites[i].title, favourites[i].body, "favouriteTable")
-        }
-        $('#favouritesWrap').show();
-    } else {
-        $('#favouritesWrap').hide();
-    }
-}
-
 $(document).ready(function() {
 
     //regular button search
@@ -51,6 +38,19 @@ $(document).ready(function() {
         }
     });
 });
+
+//handles loading of Favourites section
+function handleFavourites() {
+    $('#favouriteTable').find("tr:gt(0)").remove();
+    if (favourites.length > 0) {
+        for (let i = 0; i < favourites.length; i++) {
+            fillTable(favourites[i].title, favourites[i].body, "favouriteTable")
+        }
+        $('#favouritesWrap').show();
+    } else {
+        $('#favouritesWrap').hide();
+    }
+}
 
 //pushes new object to favourites array
 function addFavourite( newTitle, newBody) {
