@@ -55,6 +55,7 @@ section {
 table, #innerFavourites {
     table-layout: fixed;
     width: 85%;
+
 }
 
 div #resultsWrap,
@@ -85,6 +86,6 @@ li {
     margin-bottom: 5px;
 }
 
-tr:first-child td {
-    width: 30%;
+#favStar {
+    padding-left: 3em;
 }

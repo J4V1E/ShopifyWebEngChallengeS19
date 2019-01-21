@@ -81,7 +81,9 @@ function search() {
         $('#resultTable').find("tr:gt(0)").remove();
         for (let i = 0; i < result.length; i++) {
             if (result[i].keywords.includes(searchString)) {
-                fillTable(result[i].title, result[i].body, "resultTable");
+                let decodedBody = $('<div />').html(result[i].body).text();
+                let decodedTitle = $('<div />').html(result[i].title).text();
+                fillTable(decodedTitle, decodedBody, "resultTable");
             }
         }
     })
@@ -96,15 +98,15 @@ function search() {
 //  table specifies which table is being appended to
 function fillTable(title, body, table) {
     //'decodes' unicode into html elements
-    let decodedBody = $('<div />').html(body).text();
-    let decodedTitle = $('<div />').html(title).text();
+    // let decodedBody = $('<div />').html(body).text();
+    // let decodedTitle = $('<div />').html(title).text();
 
     //appends to last row in specified table
-    $('#' + table + ' tr:last').after("<tr><td><span id='favStar' class='fa fa-star'></span><span class='resultTitle'>" + decodedTitle + "</span></td> <td class='resultBody'>" + decodedBody + "</td></tr>");
+    $('#' + table + ' tr:last').after("<tr><td><span id='favStar' class='fa fa-star'></span><span class='resultTitle'>" + title + "</span></td> <td class='resultBody'>" + body + "</td></tr>");
 
     //checks if the title is found in favourites
     //  to make the star green
-    if (favourites.some(e => e.title === decodedTitle)) {
+    if (favourites.some(e => e.title === title)) {
         $('#' + table + ' tr:last').children().children('#favStar').toggleClass( "checked" );
     }
 }
