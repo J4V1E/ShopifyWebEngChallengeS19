@@ -52,13 +52,9 @@ section {
     align-content: center;
 }
 
-table, #test {
+table, #innerFavourites {
     table-layout: fixed;
     width: 85%;
-}
-
-#test {
-
 }
 
 div #resultsWrap,
@@ -78,6 +74,7 @@ div #favouritesWrap {
 
 td{
     vertical-align: top;
+
 }
 
 ul {
@@ -86,4 +83,8 @@ ul {
 
 li {
     margin-bottom: 5px;
+}
+
+tr:first-child td {
+    width: 30%;
 }
