@@ -1,0 +1,74 @@
+.blueGreenGradient{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+    background: #283c86;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: #38785D;
+}
+
+button {
+    font-size: 18px;
+    line-height: 60px;
+    font-weight: bolder;
+    width: 50px;
+    height: 50px;
+    color: #45a2a0;
+}
+section {
+    align-items: center;
+    justify-content: center;
+}
+
+#searchBar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+table, #test {
+    table-layout: fixed;
+    width: 85%;
+}
+
+#test {
+
+}
+
+div #resultsWrap,
+div #favouritesWrap {
+    display: flex;
+    align: center;
+    justify-content: center;
+}
+
+#favouritesWrap {
+    background-color: #F7FDF9;
+}
+
+.checked {
+    color: #38785D;
+}
+
+td{
+    vertical-align: top;
+}
+
+ul {
+    margin-top: 0px;
+}
+
+li {
+    margin-bottom: 5px;
+}
